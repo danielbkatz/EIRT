@@ -1,5 +1,8 @@
 #install packages to get data
+install.packages("tidyverse")
+install.packages("TAM")
 install.packages("RCurl")
+install.packages("lme4")
 library(RCurl)
 
 #get the data read in. Have to be connected to internet. 
