@@ -1,13 +1,15 @@
 #install packages to get data
 install.packages("tidyverse")
 install.packages("TAM")
-install.packages("RCurl")
 install.packages("lme4")
-library(RCurl)
+install.packages("readr")
+library(readr)
+library(tidyverse)
+library(lme4)
+library(TAM)
 
 #get the data read in. Have to be connected to internet. 
-data1 <- getURL("https://raw.githubusercontent.com/danielbkatz/EIRT/master/eirtdata.csv")
-eirtdata <- read.csv(text = data1)
+eirtdata <- read_csv("https://raw.githubusercontent.com/danielbkatz/EIRT/master/eirtdata.csv")
 
 #get rid of the extra column
 eirtdata <- eirtdata[-1]
